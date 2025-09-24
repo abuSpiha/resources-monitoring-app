@@ -1,0 +1,15 @@
+{
+  "appId": "com.abuSpiha.electron-monitoring-app",
+  "files": ["frontend-dist", "backend-dist"],
+  "icon": "./desktopIcon.png",
+  "mac": {
+    "target": "dmg"
+  },
+  "win": {
+    "target": ["portable", "msi"]
+  },
+  "linux": {
+    "target": "AppImage",
+    "category": "Utility"
+  }
+}
