@@ -3,13 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "src/backend/main",
+  "main": "backend-dist/main",
   "scripts": {
     "dev:front": "vite",
     "dev:back": "electron .",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "transpile:back": "tsc --project src/backend/tsconfig.json"
   },
   "dependencies": {
     "react": "^19.1.1",
