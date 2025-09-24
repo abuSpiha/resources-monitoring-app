@@ -1,6 +1,12 @@
 import { app, BrowserWindow } from "electron";
 import path from "path";
+import { isDev } from "./util.js";
 app.on("ready", () => {
     const mainWindow = new BrowserWindow({});
-    mainWindow.loadFile(path.join(app.getAppPath(), "/frontend-dist/index.html"));
+    if (isDev()) {
+        mainWindow.loadURL("http://localhost:3000");
+    }
+    else {
+        mainWindow.loadFile(path.join(app.getAppPath(), "/frontend-dist/index.html"));
+    }
 });
